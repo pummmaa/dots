@@ -1,0 +1,45 @@
+{
+  "height": 25,
+  "modules-left": ["sway/workspaces"],
+  "modules-center": [
+    "custom/clock"
+  ],
+  "modules-right": [
+    "network",
+    "battery",
+    "tray",
+  ],
+  "custom/clock": {
+    "exec": "date +'%I:%M'",
+    "on-click": "month",
+    "on-click-right": "schedule",
+    "interval": 60
+  },
+  "battery": {
+    "bat": "BAT0",
+    "adapter": "AC",
+    "states": {
+      "warning": 50,
+      "critical": 25
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "{capacity}% <span color=\"#9ece6a\">󰂄</span>",
+    "format-icons": [
+      "<span color=\"#f7768e\">󰂎</span>",
+      "<span color=\"#f7768e\">󰁻</span>",
+      "<span color=\"#e0af68\">󰁾</span>",
+      "<span color=\"#9ece6a\">󰂀</span>",
+      "<span color=\"#9ece6a\">󰁹</span>"
+    ],
+    "interval": 2
+  },
+    "network": {
+        /* "format-wifi": "直", */
+        "format-wifi": "{icon} ",
+        "format-ethernet": "󰛳",
+        "format-disconnected": "󰅛",
+        "tooltip-format": "{essid}",
+        "on-click": "",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+    },
+}
